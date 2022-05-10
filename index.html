@@ -7,10 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Get - JavaScript</title>
   </head>
+  <style>
+
+    div {
+      color: white
+    }
+
+    .shadow {
+      box-shadow:
+        2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+        6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+        12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+        22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+        41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+      }
+
+    input {
+    border-radius: 1rem;
+    width: 15rem;
+    height: 2rem;
+  }
+
+ input:hover{
+    width: 20rem;
+    height: 4rem;
+  }
+
+button {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    width: 15rem;
+    height: 2rem;
+}
+ 
+  </style>
   <body>
     <div
+    class="shadow"
       style="
-        border-style: groove;
+        background-color: #5b5d5f;
         width: 27rem;
         height: 34rem;
         padding-left: 6rem;
@@ -18,11 +54,17 @@
         border-radius: 2rem;
       "
     >
-      <h1>Simulação de tela de login</h1>
-      <input type="text" placeholder="Insira seu email" style="margin-bottom: 1rem"/></br>
-      <input type="password" placeholder="Insira sua senha" />
+      <h1 style="font-weight: 200;
+        text-transform: uppercase;
+        white-space: nowrap;
+        position: relative;
+        left: -4.5rem;">
+         Simulação de tela de login
+      </h1>
+      <input name="nome" id="nome" type="text" placeholder="Insira seu email" style="margin-bottom: 1rem"/></br>
+      <input name="password" id="password" type="password" placeholder="Insira sua senha" />
       <element onclick="myScript"></element>
-      <button onclick="teste()"></button>
+      <button onclick="validaForm()">VALIDAR FORMULÁRIOS</button>
     </div>
   </body>
 </html>
